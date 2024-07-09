@@ -107,6 +107,86 @@ button:focus, button:active {
   display: none;
 }
 
+#session-history {
+  margin-top: 50px;
+  text-align: center;
+ 
+}
+
+#history-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#history-list li {
+  background-color: #fffbfb86;
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 5px;
+  text-align: center;
+  color: rgb(48, 48, 48);
+}
+
+#daily-goal {
+  margin-top: 10px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#goal-input {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom:10px; /* Adjust the margin-bottom to increase or decrease space */
+}
+
+#goal-display {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #8b0000;
+  color: #fff;
+}
+
+#no-history-message {
+  color: #ffb5b5;
+  font-style: italic;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#goal-button{
+  cursor: pointer;
+  font-size: 15px;
+  height: 35px;
+  text-transform: uppercase;
+  color: hsl(180, 18%, 3%);
+  font-weight: bold;
+  width: 150px;
+  background-color: white;
+  border-width: initial;
+  border-style: none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 4px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
 @media screen and (max-width: 550px) {
   .clock {
     font-size: 8rem;

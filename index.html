@@ -43,6 +43,16 @@
         <button class="main-button" data-action="start" id="js-btn">
           Start
         </button>
+        <div id="session-history">
+          <h2>Session History</h2>
+          <ul id="history-list"></ul>
+        </div>
+        <div><h2>Daily Goal Tracker</h2></div>
+        <div id="daily-goal">
+          <input type="number" id="goal-input" placeholder="Set goal (in session)">
+          <button id = "goal-button" onclick="setDailyGoal()">Set Goal</button>
+          <p id="goal-display">Goal: 0/0 sessions completed</p>
+        </div>
       </div>
     </main>
     <div class="hidden">
