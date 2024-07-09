@@ -78,7 +78,6 @@ function startTimer() {
 
       document.querySelector(`[data-sound="${timer.mode}"]`).play();
 
-      // Add session to history
       addSessionHistory(timer.mode, timer[timer.mode]);
 
       startTimer();
@@ -164,7 +163,15 @@ function addSessionHistory(sessionType, duration) {
   if (sessionType === 'pomodoro') {
     sessionsCompleted += 1;
     updateGoalDisplay();
+
+    const noHistoryMessage = document.getElementById('no-history-message');
+    if (noHistoryMessage) {
+      historyList.removeChild(noHistoryMessage);
+    }
   }
+
+  // Ensure the newly added item is visible without changing the zoom level
+  historyList.scrollTop = historyList.scrollHeight;
 }
 
 function updateSessionHistory() {
@@ -183,9 +190,8 @@ function updateSessionHistory() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', updateSessionHistory);
-
 document.addEventListener('DOMContentLoaded', () => {
+  updateSessionHistory();
   if ('Notification' in window) {
     if (
       Notification.permission !== 'granted' &&
